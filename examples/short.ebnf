@@ -1,0 +1,27 @@
+program ::=
+	class_file_header? declaration_or_statement*
+
+class_file_header ::=
+	"version" number "class" eol+ class_begin_block
+
+class_begin_block ::=
+	"begin" reference? IN class_begin_item* EX "end"
+
+class_begin_item ::=
+	assignment_statement
+	class_begin_block
+	eol
+
+declaration_or_statement ::=
+	declaration eol
+	statement eol
+	eol
+
+single_declaration_or_statement ::=
+	declaration colon_declaration_or_statement*
+	statement colon_declaration_or_statement*
+
+colon_declaration_or_statement ::=
+	":" declaration_or_statement?
+
+

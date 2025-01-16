@@ -1,0 +1,30 @@
+grammar ::=
+  rule+
+
+rule ::=
+  identifier "::=" newline {rule_entry newline}+ newline+
+
+rule_entry ::=
+  rule_token+
+
+rule_token ::=
+  string modifier?
+  identifier modifier?
+  "ε" modifier?
+  "{" rule_entry "}" modifier?
+
+identifier ::=
+  /[a-zA-Z_][a-zA-Z_0-9]*/
+
+newline ::=
+  "\n"
+
+string ::=
+  /"([^\\"\n]|\\.)*"/
+
+regex ::=
+  /\/([^\\\/\n]|\\.)*\//
+
+modifier ::=
+  /[+?*]/
+
