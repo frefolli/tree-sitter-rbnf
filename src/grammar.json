@@ -1,5 +1,5 @@
 {
-  "name": "bnf",
+  "name": "rbnf",
   "rules": {
     "grammar": {
       "type": "REPEAT1",

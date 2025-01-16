@@ -2,10 +2,10 @@ prefix=@PREFIX@
 libdir=@LIBDIR@
 includedir=@INCLUDEDIR@
 
-Name: tree-sitter-bnf
-Description: Bnf grammar for tree-sitter
+Name: tree-sitter-rbnf
+Description: Rbnf grammar for tree-sitter
 URL: @URL@
 Version: @VERSION@
 Requires: @REQUIRES@
-Libs: -L${libdir} @ADDITIONAL_LIBS@ -ltree-sitter-bnf
+Libs: -L${libdir} @ADDITIONAL_LIBS@ -ltree-sitter-rbnf
 Cflags: -I${includedir}

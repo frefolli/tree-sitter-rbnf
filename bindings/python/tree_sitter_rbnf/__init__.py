@@ -1,4 +1,4 @@
-"""Bnf grammar for tree-sitter"""
+"""Rbnf grammar for tree-sitter"""
 
 from importlib.resources import files as _files
 

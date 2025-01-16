@@ -1,5 +1,5 @@
 {
-  "name": "tree-sitter-bnf",
+  "name": "tree-sitter-rbnf",
   "version": "0.0.1",
   "description": "Bnf grammar for tree-sitter",
   "repository": "github:tree-sitter/tree-sitter-bnf",
@@ -10,7 +10,7 @@
     "incremental",
     "parsing",
     "tree-sitter",
-    "bnf"
+    "rbnf"
   ],
   "files": [
     "grammar.js",
@@ -45,8 +45,8 @@
   },
   "tree-sitter": [
     {
-      "scope": "source.bnf",
-      "injection-regex": "^bnf$"
+      "scope": "source.rbnf",
+      "injection-regex": "^rbnf$"
     }
   ]
 }

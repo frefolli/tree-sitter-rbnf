@@ -1,11 +1,11 @@
 from unittest import TestCase
 
-import tree_sitter, tree_sitter_bnf
+import tree_sitter, tree_sitter_rbnf
 
 
 class TestLanguage(TestCase):
     def test_can_load_grammar(self):
         try:
-            tree_sitter.Language(tree_sitter_bnf.language())
+            tree_sitter.Language(tree_sitter_rbnf.language())
         except Exception:
-            self.fail("Error loading Bnf grammar")
+            self.fail("Error loading Rbnf grammar")
