@@ -9,7 +9,7 @@ from wheel.bdist_wheel import bdist_wheel
 class Build(build):
     def run(self):
         if isdir("queries"):
-            dest = join(self.build_lib, "tree_sitter_bnf", "queries")
+            dest = join(self.build_lib, "tree_sitter_rbnf", "queries")
             self.copy_tree("queries", dest)
         super().run()
 
@@ -26,15 +26,15 @@ setup(
     packages=find_packages("bindings/python"),
     package_dir={"": "bindings/python"},
     package_data={
-        "tree_sitter_bnf": ["*.pyi", "py.typed"],
-        "tree_sitter_bnf.queries": ["*.scm"],
+        "tree_sitter_rbnf": ["*.pyi", "py.typed"],
+        "tree_sitter_rbnf.queries": ["*.scm"],
     },
-    ext_package="tree_sitter_bnf",
+    ext_package="tree_sitter_rbnf",
     ext_modules=[
         Extension(
             name="_binding",
             sources=[
-                "bindings/python/tree_sitter_bnf/binding.c",
+                "bindings/python/tree_sitter_rbnf/binding.c",
                 "src/parser.c",
                 # NOTE: if your language uses an external scanner, add it here.
             ],

@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-bnf
+module github.com/tree-sitter/tree-sitter-rbnf
 
 go 1.23
 
